@@ -29,8 +29,17 @@ public abstract class MarkerEntityManipulatorMixin {
     }
 
     @Inject(method = "handleLeftClick", at = @At("HEAD"), cancellable = true)
-    private static void markertools$grabResizeHandle(CallbackInfoReturnable<UserAction.ActionResult> cir) {
-        if (MarkerResizeHandles.leftClick()) {
+    private static void markertools$leftClickResizeHandle(
+            CallbackInfoReturnable<UserAction.ActionResult> cir) {
+        if (MarkerResizeHandles.click(false)) {
+            cir.setReturnValue(UserAction.ActionResult.USED_STOP);
+        }
+    }
+
+    @Inject(method = "handleRightClick", at = @At("HEAD"), cancellable = true)
+    private static void markertools$rightClickResizeHandle(
+            CallbackInfoReturnable<UserAction.ActionResult> cir) {
+        if (MarkerResizeHandles.click(true)) {
             cir.setReturnValue(UserAction.ActionResult.USED_STOP);
         }
     }
