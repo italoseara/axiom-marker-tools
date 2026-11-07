@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.italoseara.markertools.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "BuilderToolManagerAccessor",
+    "CreateDisplayEntityScreenAccessor",
+    "CreateDisplayEntityScreenMixin",
+    "EditMarkerScreenAccessor",
+    "MarkerDataPacketMixin",
+    "MarkerEntityManipulatorAccessor",
+    "MarkerEntityManipulatorMixin",
+    "MinecraftMixin",
+    "SwitchHotbarScreenAccessor",
+    "SwitchHotbarScreenMixin",
+    "VersionUtilsClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

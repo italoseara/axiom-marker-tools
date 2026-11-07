@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "axiom-marker-tools",
+  "version": "${version}",
+  "name": "Marker Tools for Axiom",
+  "description": "An Axiom add-on for marker entities: create them from a selection or the display screen, resize them with gizmos, pick colors, and see region markers from further away.",
+  "authors": ["Ítalo Seara"],
+  "contact": {
+    "sources": "https://github.com/italoseara/axiom-marker-tools",
+    "issues": "https://github.com/italoseara/axiom-marker-tools/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/axiom-marker-tools/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["io.github.italoseara.markertools.MarkerToolsClient"]
+  },
+  "mixins": ["axiom-marker-tools.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "fabric-api": "*",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "axiom": ">=6.1.5 <6.2"
+  }
+}
